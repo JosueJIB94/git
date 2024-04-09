@@ -2,7 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <title>.: Examen :.</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="estilo.css" />
+    
 </head>
 <body>
     <div id="container">
@@ -13,67 +14,129 @@
             <span id="tagline">Git y Github</span>
         </div>
         <div id="post">
-            <h1>Alumn@: [Nombre Completo]</h1>
+            <h1>Alumn@: [Josue Infante]</h1>
             <ol>
-                <li>
+                <<li>
                     <h3>¿Que es un sistema de control de versiones?</h3>
-                    [Pon tu respuesta]
+                    Es una herramienta que ayuda a los equipos de desarrollo de software a
+                    gestionar los cambios en el código fuente a lo largo del tiempo.
+                    Este sistema permite a los desarrolladores guardar "instantáneas" del código en
+                    diferentes puntos del tiempo, lo que facilita la posibilidad de revisar, comparar y revertir
+                    a versiones anteriores del código cuando sea necesario
                 </li>
                 <li>
                     <h3>¿Cual es la diferencia entre git y github?</h3>
-                    [Pon tu respuesta]
+                        Git>Permite a los desarrolladores rastrear y gestionar cambios en el código fuente a lo
+                            largo del tiempo. Esto facilita la colaboración entre múltiples
+                            desarrolladores, permitiendo que cada uno trabaje de forma
+                            independiente en su propia copia del proyecto y luego combine sus
+                            cambios con los de los demás.
+                        GitHub> Es una plataforma de alojamiento de código basada en
+                        la web que utiliza Git para el control de versiones. Facilita la
+                        colaboración entre desarrolladores permitiendo almacenar
+                        repositorios de Git en la nube, revisar código, gestionar
+                        proyectos y construir software junto a millones de
+                        desarrolladores.
                 </li>
                 <li>
                     <h3>¿Cómo creo una rama en git?</h3>
-                    [Pon tu respuesta]
+                    Un módulo puede ser branched o bifurcado en un instante de tiempo de forma que, desde ese momento en adelante se tienen dos
+                    copias (ramas) que evolucionan de forma independiente siguiendo su propia línea de desarrollo. El módulo tiene entonces 2 (o más)
+                    "ramas". La ventaja es que se puede hacer un "merge" de las modificaciones de ambas ramas, posibilitando la creación de "ramas de
+                    prueba" que contengan código para evaluación, si se decide que las modificaciones realizadas en la "rama de prueba" sean
+                    preservadas, se hace un "merge" con la rama principal. Son motivos habituales para la creación de ramas la creación de nuevas
+                    funcionalidades o la corrección de errores.
+                    git branch: Se usa para listar, crear o eliminar ramas.
                 </li>
                 <li>
                     <h3>¿Cómo clono un repositorio?</h3>
-                    [Pon tu respuesta]
+                    git clone [repositorio]: Hace una copia completa de un repositorio
+                    remoto en tu máquina local, incluyendo todos los archivos, ramas y commits.
                 </li>
                 <li>
                     <h3>¿Cómo puedo bajar los ultimos cambios de un repositorio?</h3>
-                    [Pon tu respuesta]
+                    git pull: Es básicamente la combinación de git fetch seguido de git
+                    merge. Descarga los cambios desde el repositorio remoto (fetch) y luego los
+                    integra en tu rama actual de trabajo (merge).
                 </li>
                 <li>
                     <h3>¿Cómo puedo gener un tag?</h3>
-                    [Pon tu respuesta]
+                    Navegar al directorio del repositorio: Abre tu terminal y navega al directorio del 
+                    repositorio en el que deseas crear el tag utilizando el comando cd.
+                    
+                    cd /ruta/a/tu/repositorio
+                    
+                    Selecciona el commit al que deseas agregar el tag: Puedes crear un tag para marcar un commit específico. 
+                    Puedes ver una lista de los commits y sus ID utilizando el comando git log.
+                    
+                    git log
+                    
+                    Crea el tag: Una vez que hayas identificado el commit al que deseas agregar el tag, puedes crearlo
+                    utilizando el comando git tag, seguido del nombre del tag y el ID del commit al que deseas asociarlo. 
+                    Por ejemplo:
+                    
+                    git tag -a nombre_del_tag -m "Mensaje descriptivo" id_del_commit
+                    
+                    Donde:
+                    
+                    nombre_del_tag es el nombre que deseas darle al tag.
+                    "Mensaje descriptivo" es un mensaje descriptivo que acompañará al tag (puedes omitir esta parte si lo deseas).
+                    id_del_commit es el ID del commit al que deseas asociar el tag (puedes encontrarlo en el resultado de git log).
+
                 </li>
                 <li>
                     <h3>Cómo hago una mezcla de ramas?</h3>
-                    [Pon tu respuesta]
+                    git merge [rama]: Combina los cambios de la rama especificada en la rama
+                    actual en la que te encuentras. Por ejemplo, puedes fusionar los cambios de
+                    una rama de desarrollo en tu rama principal.
                 </li>
                 <li>
                     <h3>¿Cómo puedo moverme a un commit especifico?</h3>
-                    [Pon tu respuesta]
+                    Encuentra el identificador del commit: Primero, necesitas encontrar el identificador único (hash) del commit al que deseas moverte. 
+                    git log
+                    Utiliza el comando git checkout: Con el hash del commit que deseas visitar, utiliza el comando git checkout seguido del hash del commit.
+
+                    git checkout *hash_del_commit*
                 </li>
                 <li>
                     <h3>¿Cómo puedo borrar una rama?</h3>
-                    [Pon tu respuesta]
+                    >Utilizando el comando git branch -d seguido del nombre de la rama que deseas borrar.
                 </li>
                 <li>
                     <h3>¿Cómo puedo borrar un tag?</h3>
-                    [Pon tu respuesta]
+                   Con el comando git tag se mostrará una lista de todas las tags en tu repositorio para saber cuales estan en el mismo
+                   Utilizar el comando git tag -d seguido del nombre de la tag que se desea borrar
                 </li>
                 <li>
                     <h3>¿Cómo puedo ver los cambios que estan por enviarse al repositorio?</h3>
-                    [Pon tu respuesta]
+                    Utilizando git diff: Este comando muestra las diferencias entre los archivos en tu directorio de trabajo 
+                    (el estado actual de tus archivos) y el área de preparación (los cambios que están listos para ser confirmados)
+
+                    Utilizando git diff --cached: Este comando muestra las diferencias entre el área de preparación 
+                    (los cambios que están listos para ser confirmados) y la versión más reciente confirmada en el repositorio.
                 </li>
                 <li>
                     <h3>¿Para que sirve el comando <em>git remote -v?</em></h3>
-                    [Pon tu respuesta]
+                    El comando git remote -v se utiliza para mostrar la lista de los repositorios remotos configurados 
+                    en tu repositorio local, junto con sus URL. Aquí te explico qué hace cada parte del comando:
+
+                    git remote: Es un comando de Git que se utiliza para administrar los repositorios remotos asociados con tu repositorio local.
+                    -v: Esta opción se utiliza para mostrar los detalles verbosos, es decir, la URL de cada repositorio remoto.
                 </li>
                 <li>
                     <h3>¿Cómo le digo a git cual es mi email y correo?</h3>
-                    [Pon tu respuesta]
+                        git config user.name "Tu Nombre"
+                        git config user.email "tu@email.com"
+
                 </li>
                 <li>
                     <h3>¿Cuales son los pasos para conectar git con github?</h3>
-                    [Pon tu respuesta]
+                     Enviarlos al repositorio remoto en GitHub utilizando el comando git push (git push -u origin master)
                 </li>
                 <li>
                     <h3>¿Cómo puedo crear un alias en git?</h3>
-                    [Pon tu respuesta]
+                        Dentro del repositorio ejecutar el siguiente comando> git config alias.nombre_del_alias "comando o secuencia de comandos"
+
                 </li>
             </ol>
         </div>
